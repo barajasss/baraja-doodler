@@ -10,6 +10,4 @@ const port = process.env.PORT || 3000
 
 io.on('connection', socketController)
 
-server.listen(port, '127.0.0.1', () =>
-	console.log(`Server listening at port:${port}`)
-)
+server.listen(port)
