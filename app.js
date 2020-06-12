@@ -3,7 +3,7 @@ const express = require('express')
 const userController = require('./controllers/userController')
 
 const app = express()
-
+app.enable('trust proxy')
 app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
 app.set('views', 'views')
