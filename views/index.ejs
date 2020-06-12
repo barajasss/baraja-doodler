@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
+	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+	<title>Baraja Doodler</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/socket.js"></script>
+	<script src="/js/init.js" defer></script>
+</head>
+
+<body>
+	<div>
+		<h1 style="color: #222;">Welcome to Baraja Doodler</h1>
+		<form id="form"
+			style="color: #222; background-color: yellowgreen; margin: 5px; padding: 25px; border-radius: 5px; font-size: 1.2rem">
+			<label for="form__name" style="font-weight: bold;">Your Name: </label>
+			<br>
+			<input id="form__name" type="text"
+				style="border-radius: 5px; margin-top: 10px; padding: 5px 10px; border: 1px solid green; outline: none; width: 80%; font-size: 1.2rem; font-family: serif;"
+				required autofocus>
+			<br>
+			<button style="margin-left: 0; margin-top: 15px;">Continue</button>
+		</form>
+	</div>
+</body>
+
+</html>

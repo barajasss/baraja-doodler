@@ -1,0 +1,151 @@
+* {
+	border-radius: 0.5px;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	border: none;
+	background-color: dodgerblue;
+	cursor: pointer;
+	margin: 0.5rem;
+	color: white;
+	font-weight: bold;
+	outline: none;
+	border-radius: 3px;
+}
+button:active {
+	animation: blue-color-fade 1.5s linear;
+}
+
+.underscore {
+	text-align: center;
+}
+.underscore__el {
+	margin: 0.5rem 0.2rem;
+	font-size: 2.5rem;
+}
+canvas {
+	display: block;
+	border: 0.5px solid #333;
+	cursor: url('/cursors/pencil.gif'), pointer;
+	margin: 0 auto;
+}
+img {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #333;
+}
+
+.keyboard {
+	margin: 0.8rem auto;
+}
+
+.keyboard__keyboard-row {
+	display: flex;
+	margin: 0 auto;
+}
+
+.keyboard__keyboard-row > * {
+	flex: 1;
+	background-color: greenyellow;
+	border: 1px solid #333;
+	padding: 0.3rem 0.5rem;
+	text-align: center;
+	margin: 0.3rem 0.2rem;
+	font-size: 1rem;
+}
+
+.keyboard-row--1 {
+	width: 90%;
+}
+.keyboard-row--2 {
+	width: 80%;
+}
+.keyboard-row--3 {
+	width: 75%;
+}
+
+.key:active {
+	animation: green-color-fade 1.5s linear;
+}
+.key--special {
+	background-color: lightgray;
+}
+
+@keyframes green-color-fade {
+	from {
+		background-color: yellow;
+	}
+	to {
+		background-color: greenyellow;
+	}
+}
+
+@keyframes blue-color-fade {
+	from {
+		background-color: rgb(71, 198, 248);
+	}
+	to {
+		background-color: dodgerblue;
+	}
+}
+
+/* USERS and CHATS */
+
+.player-container {
+	display: flex;
+	justify-content: space-between;
+}
+.player-container .player {
+	flex: 1;
+	border: 1px solid black;
+}
+.player {
+	position: relative;
+}
+.player .chat {
+	position: absolute;
+	left: 70px;
+	top: 20px;
+	background-color: yellow;
+	padding: 5px;
+	border-radius: 5px;
+	opacity: 0;
+}
+.chat.animate {
+	animation: fade 2s ease-out;
+}
+
+.user-img {
+	margin: 10px;
+	margin-bottom: 1px;
+	max-width: 50px;
+	max-height: 50px;
+	border-radius: 50%;
+}
+.user-container {
+	display: inline-block;
+	background-color: red;
+}
+.user-name {
+	margin: 5px;
+	margin-top: 1px;
+	text-align: center;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
