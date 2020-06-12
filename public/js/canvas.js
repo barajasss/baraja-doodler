@@ -53,7 +53,7 @@ function downHandler(e) {
 function moveHandler(e) {
 	if (paint) {
 		draw(e)
-		updateOtherCanvas(canvas.toDataURL())
+		updateOtherCanvas(canvas.toDataURL('image/png', 0.3))
 	}
 }
 
